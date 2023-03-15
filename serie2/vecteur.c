@@ -46,6 +46,30 @@ Vecteur lire_vect(Vecteur v)
      return v;
 }
 
+
+
+int max(Vecteur v)
+{
+    int i,max;
+    max = ieme(v, 0);
+    for(i=1; i<taille(v);i++) {
+      if(ieme(v,i) > max)
+      max=ieme(v,i);
+   }
+
+    return max;
+}
+
+int sum(Vecteur v)
+{
+    int i,som=0;
+    for(i=1;i<=taille(v);i++)
+    {
+      som += ieme(v, i);
+    }
+    return som;
+}
+
 void afficher_vecteur(Vecteur v)
 {
      int i;
